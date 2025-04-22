@@ -1,0 +1,11 @@
+.form-box{
+    height:400px;
+}
+body {
+    background-color: #f8f9fa;
+  }
+  
+  form input::placeholder {
+    color: #aaa;
+  }
+  
