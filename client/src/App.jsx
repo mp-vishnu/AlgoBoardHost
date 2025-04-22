@@ -9,7 +9,8 @@ import Forms from './Components/Forms';
 import RoomPage from './Pages/Room';
 import CodeEditor from "./Pages/Editor/CodeEditor";
 
-const server = "http://localhost:8000";
+const server = import.meta.env.VITE_BACKEND_URL;
+
 const connectionOptions = {
   "force new connection": true,
   reconnectionAttempts: "Infinity",
@@ -25,6 +26,7 @@ const App = () => {
   const [roomId, setRoomId] = useState(null);
 
   useEffect(() => {
+    console.log("Server URL:", import.meta.env.VITE_BACKEND_URL);
     socket.on("userIsJoined", (data) => {
       if (data.success) {
         setUsers(data.users);

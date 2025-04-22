@@ -19,7 +19,7 @@ client/build/
 
 # Ignore server config
 server/config/config.env
-
+client/.env
 # Testing coverage
 client/coverage/
 
