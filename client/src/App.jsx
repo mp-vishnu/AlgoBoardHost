@@ -9,7 +9,7 @@ import Forms from './Components/Forms';
 import RoomPage from './Pages/Room';
 import CodeEditor from "./Pages/Editor/CodeEditor";
 
-const server = import.meta.env.VITE_BACKEND_URL;
+const server = import.meta.env.VITE_BACKEND_URL.replace("http://", "wss://");
 
 const connectionOptions = {
   "force new connection": true,

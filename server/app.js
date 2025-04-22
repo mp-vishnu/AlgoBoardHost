@@ -20,8 +20,8 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
   cors: {
-    //origin: "*", // Allow all origins, or specify your frontend URL
-    origin: "https://algoboard-die0.onrender.com",
+    origin: "*", // Allow all origins, or specify your frontend URL
+    // origin: "https://algoboard-die0.onrender.com",
     methods: ["GET", "POST"],
   },
 });
